@@ -1,0 +1,37 @@
+version: '3.1'
+
+services:
+
+  db:
+    container_name: db
+    image: postgres:12.2
+    environment:
+      POSTGRES_USER: psybuddha
+      POSTGRES_PASSWORD: 123tema321
+      POSTGRES_DB: gino
+    ports:
+      - 5432:5432
+    env_file:
+      - ".env"
+    restart: always
+
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+ #   network_mode: "host"
+
+  tgbot:
+    image: psybuddha/tg-bot
+    container_name: bot
+    build: .
+    volumes:
+      - .:/src
+    command: python app.py
+    network_mode: "host"
+    env_file:
+      - ".env"
+    restart: always
+
