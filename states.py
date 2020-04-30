@@ -12,8 +12,6 @@ class NewItem(StatesGroup):
     Price = State()
     Confirm = State()
 
-# class DeleteItem(StatesGroup):
-
 
 class Mailing(StatesGroup):
     Text = State()

@@ -10,7 +10,7 @@ db_user = os.getenv("PG_USER")
 db_pass = os.getenv("PG_PASS")
 channel = os.getenv("CHANNEL")
 admin_group = os.getenv("ADMIN_GROUP")
-host = "192.168.99.100"
+host = os.getenv("PGHOST")
 
 
 I18N_DOMAIN = 'tg-bot'
