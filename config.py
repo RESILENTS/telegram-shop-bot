@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TOKEN = os.getenv("TOKEN")
-admin_id = int(os.getenv("ADMIN_ID"))
+TOKEN = os.getenv("1543845399:AAGMq9rrQW7xSvgAPnXUjpjBNVfw6G1E9HA")
+admin_id = int(os.getenv("641892529"))
 db_user = os.getenv("PG_USER")
 db_pass = os.getenv("PG_PASS")
 channel = os.getenv("CHANNEL")
